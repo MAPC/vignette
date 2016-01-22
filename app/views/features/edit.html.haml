@@ -35,5 +35,5 @@
 		.ui.form
 			= form_for @feature.bricks.new, html:{ class: "ui form" } do |f|
 				.field
-					= f.text_field :configuration
+					= f.text_field :configuration, name: "brick[configuration][body]"
 				= f.submit "Create", class: "fluid ui green button center"
