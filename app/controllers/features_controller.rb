@@ -9,7 +9,6 @@ class FeaturesController < ApplicationController
 
 	def edit
 		@feature = Feature.find(params[:id])
-		@narrative = Narrative.new
 	end
 
 	def new 

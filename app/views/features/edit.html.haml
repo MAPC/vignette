@@ -33,8 +33,7 @@
 		Add Narrative
 	.content
 		.ui.form
-			= form_for @narrative, html:{ class: "ui form" } do |f|
+			= form_for @feature.bricks.new, html:{ class: "ui form" } do |f|
 				.field
-					= label :body, "Body"
-					= f.text_area :body
+					= f.text_field :configuration
 				= f.submit "Create", class: "fluid ui green button center"

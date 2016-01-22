@@ -11,33 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122014554) do
+ActiveRecord::Schema.define(version: 20160122014208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bricks", force: :cascade do |t|
-    t.boolean  "wide",       default: true
-    t.integer  "row_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.boolean  "wide",          default: true
+    t.json     "configuration"
+    t.string   "type"
+    t.integer  "order"
+    t.integer  "feature_id"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "features", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "narratives", force: :cascade do |t|
-    t.string   "body"
-    t.integer  "brick_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "rows", force: :cascade do |t|
-    t.integer  "feature_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

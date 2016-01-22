@@ -30,6 +30,9 @@ Rails.application.routes.draw do
     resources :narratives do
     end
 
+    resources :bricks do
+    end
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

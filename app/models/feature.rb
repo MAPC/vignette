@@ -1,3 +1,3 @@
 class Feature < ActiveRecord::Base
-	has_many :rows
+	has_many :bricks
 end
