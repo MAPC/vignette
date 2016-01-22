@@ -1,0 +1,6 @@
+%h1.ui.header New Vignette
+= form_for @feature, html:{ class: "ui form" } do |f|
+  .field
+    = label :title, "Title"
+    = f.text_field :title
+  = f.submit "Create", class: "fluid ui green button center"

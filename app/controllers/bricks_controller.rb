@@ -1,0 +1,2 @@
+class BricksController < ApplicationController
+end

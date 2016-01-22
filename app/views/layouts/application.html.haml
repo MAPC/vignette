@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %title Vignette
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .ui.fixed.inverted.menu
+      .ui.container
+        %a.header.item{:href => "#"}
+          Vignette
+        %a.item{:href => "/features"} Home
+        .ui.simple.dropdown.item
+          Menu
+          %i.dropdown.icon
+          .menu
+            %a.item{:href => "/features/new"} New
+            %a.item{:href => "#"} About
+    .ui.main.text.container
+      = yield
+    %br
+    %br
+    .ui.inverted.vertical.footer.segment
+      .ui.center.aligned.container
+        .ui.horizontal.inverted.small.divided.link.list
+          %a.item{:href => "#"} Site Map
+          %a.item{:href => "#"} Contact Us
+          %a.item{:href => "#"} Terms and Conditions
+          %a.item{:href => "#"} Privacy Policy

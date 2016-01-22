@@ -1,0 +1,40 @@
+%h1.ui.header 
+	= @feature.title
+.ui.divider
+.fluid.ui.green.massive.button.addbrick
+	%i.plus.icon
+
+.ui.small.modal.coupled
+	.header
+		Add Content
+	.content
+		%button.ui.huge.fluid.green.button#narrative
+			%i.book.icon 
+			Narrative
+		.ui.divider
+		%button.ui.huge.fluid.green.button#image
+			%i.file.image.outline.icon 
+			Image
+		.ui.divider			
+		%button.ui.huge.fluid.green.button#chart
+			%i.line.chart.icon 
+			Chart
+		.ui.divider
+		%button.ui.huge.fluid.green.button#map
+			%i.map.icon 
+			Map
+		.ui.divider	
+		%button.ui.huge.fluid.green.button#social
+			%i.users.icon 
+			Social
+
+.ui.large.modal.coupled.narrativemodal
+	.header
+		Add Narrative
+	.content
+		.ui.form
+			= form_for @narrative, html:{ class: "ui form" } do |f|
+				.field
+					= label :body, "Body"
+					= f.text_area :body
+				= f.submit "Create", class: "fluid ui green button center"
