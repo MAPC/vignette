@@ -1,0 +1,26 @@
+== Vignette
+
+Vignette is a platform for short, insightful, and beautiful data storytelling. The tool empowers users to weave narrative, data visualization, mapping, social media, and other content together into a single interactive online document. This empowers researchers, journalists, and planners to create a singular "masthead" document that directs audiences to their work. With a low barrier to entry, this tool makes it easy to attract online audiences to projects, especially when projects budgets are too small to warrant a web presence.
+
+
+Features to explore:
+
+ - DSL for dynamically changing text based on a data input
+ - Street View integration - embed street view when research a specific place
+ - Other tool integration: KnowPlace profile import, Housing.ma data import, Development Database integration, Trailmap, TStation.info
+ - Taggable and filterable features (topic and departmental tags)
+ - Embed vignettes into other documents
+
+
+Other features:
+
+ - Intersecting mastheads
+ - Publish verification
+ - 
+
+ Issues:
+
+ - "Publish" button doesn't do anything
+ - Title is hidden at first because of the navbar
+ - The edit buttons are awkwardly placed at times - they should have tooltips
+ - Can't edit the title yet
