@@ -1,39 +1,45 @@
-%h1.ui.header 
-	= @feature.title
-.ui.divider
-.fluid.ui.green.massive.button.addbrick
-	%i.plus.icon
-
-.ui.small.modal.coupled
-	.header
-		Add Content
-	.content
-		%button.ui.huge.fluid.green.button#narrative
-			%i.book.icon 
-			Narrative
+= render partial: 'bricks/mastheads', collection: @feature.bricks.mastheads, as: :masthead
+.ui.container
+	%h1.ui.header 
+		= @feature.title
+	.ui.main.text
 		.ui.divider
-		%button.ui.huge.fluid.green.button#image
-			%i.file.image.outline.icon 
-			Image
-		.ui.divider			
-		%button.ui.huge.fluid.green.button#chart
-			%i.line.chart.icon 
-			Chart
-		.ui.divider
-		%button.ui.huge.fluid.green.button#map
-			%i.map.icon 
-			Map
-		.ui.divider	
-		%button.ui.huge.fluid.green.button#social
-			%i.users.icon 
-			Social
+		.ui.grid
+			= render partial: 'bricks/bricks', collection: @feature.bricks.regular_bricks, as: :brick
 
-.ui.large.modal.coupled.narrativemodal
-	.header
-		Add Narrative
-	.content
-		.ui.form
-			= form_for @feature.bricks.new, html:{ class: "ui form" } do |f|
-				.field
-					= f.text_field :configuration, name: "brick[configuration][body]"
-				= f.submit "Create", class: "fluid ui green button center"
+
+		.ui.divider
+
+		.fluid.ui.green.massive.button.addbrick
+			%i.plus.icon
+
+		.ui.small.modal.coupled
+			.header
+				Add Content
+			.content
+				= link_to new_feature_brick_path(@feature, brick_type: :narrative) do
+					%button.ui.huge.fluid.green.button#narrative
+						%i.book.icon 
+						Narrative 
+				.ui.divider
+				= link_to new_feature_brick_path(@feature, brick_type: :image) do
+					%button.ui.huge.fluid.green.button#image
+						%i.file.image.outline.icon 
+						Image
+				.ui.divider			
+				= link_to new_feature_brick_path(@feature, brick_type: :chart) do
+					%button.ui.huge.fluid.green.button#chart
+						%i.line.chart.icon 
+						Chart
+				.ui.divider
+				= link_to new_feature_brick_path(@feature, brick_type: :map) do
+					%button.ui.huge.fluid.green.button#map
+						%i.map.icon 
+						Map
+				.ui.divider	
+				%button.ui.huge.fluid.green.button#social
+					%i.users.icon 
+					Social
+
+		.ui.large.modal.coupled.narrativemodal
+			= render partial: 'bricks/narrative_form', locals: { feature: @feature, brick: @brick }

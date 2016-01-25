@@ -16,15 +16,14 @@ Rails.application.routes.draw do
 
   # Example resource route with options:
     resources :features do
-
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
+      resources :bricks do
+        put :up
+        put :down
+        put :shrink
+        put :widen
+        put :mastheadify
+        put :demastheadify
+      end
     end
 
     resources :narratives do

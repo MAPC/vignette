@@ -1,0 +1,4 @@
+%div{class: ['ui',content.widened_class,'wide','column','segment'] }
+  .ui.text
+    = raw content.configuration["chart_html"]
+  = render partial: 'bricks/settings', locals: { content: content }  

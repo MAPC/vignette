@@ -1,0 +1,24 @@
+= link_to feature_brick_down_path(content.feature,content), method: :put do
+  %button.circular.ui.icon.basic.green.right.floated.button
+    %i.icon.chevron.down
+= link_to feature_brick_path(content.feature,content), method: :delete do
+  %button.circular.ui.icon.basic.red.right.floated.button
+    %i.icon.remove
+= link_to edit_feature_brick_path(content.feature,content) do
+  %button.circular.ui.icon.basic.red.right.floated.button
+    %i.icon.edit
+= link_to feature_brick_shrink_path(content.feature,content), method: :put do
+  %button.circular.ui.icon.basic.green.right.floated.button
+    %i.icon.compress
+= link_to feature_brick_widen_path(content.feature,content), method: :put do
+  %button.circular.ui.icon.basic.green.right.floated.button
+    %i.icon.expand
+= link_to feature_brick_mastheadify_path(content.feature,content), method: :put do
+  %button.circular.ui.icon.basic.green.right.floated.button
+    %i.icon.maximize
+= link_to feature_brick_demastheadify_path(content.feature,content), method: :put do
+  %button.circular.ui.icon.basic.green.right.floated.button
+    %i.icon.undo
+= link_to feature_brick_up_path(content.feature,content), method: :put do
+  %button.circular.ui.icon.basic.green.right.floated.button
+    %i.icon.chevron.up

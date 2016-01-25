@@ -14,20 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require semantic_ui/semantic_ui
+//= require marked
+//= require vue
 //= require_tree .
-
 $(document).ready(function() {
-	$('.coupled.modal')
-	  .modal({
-	    allowMultiple: false
-	  })
-	;
+  semanticInitializers();
+});
+
+$( document ).on('page:load',function() {
+  semanticInitializers();
+});
+
+function semanticInitializers() {
+	new Vue({
+		el: "#editor",
+		data: {
+		  input: ''
+		},
+		filters: {
+		  marked: marked
+		}
+	})
 
 	$('.small.modal')
 	  .modal('attach events', '.addbrick', 'show')
 	;
-	
-	$('.ui.large.modal')
-	  .modal('attach events', '.ui.small.modal #narrative')
-	;
-});
+}

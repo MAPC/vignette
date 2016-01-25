@@ -1,0 +1,15 @@
+.header
+	Add Narrative
+.content
+	.ui.form
+		= form_for [feature, brick], html:{ class: "ui form" } do |b|
+			= b.hidden_field :brick_type, value: "narrative"
+			#editor.ui.grid
+				.field.eight.column.wide
+					= b.label :configuration, "Body"
+					- if brick.configuration
+						= b.text_area :configuration, name: "brick[configuration][body]", "v-model"=>"input", "debounce" => "300", value: brick.configuration["body"]
+					- else
+						= b.text_area :configuration, name: "brick[configuration][body]", "v-model"=>"input", "debounce" => "300"
+				%div.eight.column.wide{"v-html" => "input | marked"}
+			= b.submit "Go", class: "fluid ui green button center"

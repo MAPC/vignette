@@ -26,6 +26,13 @@ gem 'sprockets', '~> 2'
 
 gem 'haml-rails'
 
+gem 'enumerize'
+gem 'acts_as_list'
+gem 'redcarpet'
+
+gem 'marked-rails'
+gem 'vuejs-rails'
+
 gem 'therubyracer'
 gem 'less-rails-semantic_ui', '~> 2.0.7.0'
 gem 'autoprefixer-rails', '~> 5.2.1.2'

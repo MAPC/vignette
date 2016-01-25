@@ -9,6 +9,13 @@ class FeaturesController < ApplicationController
 
 	def edit
 		@feature = Feature.find(params[:id])
+		@brick = Brick.new
+	end
+
+	def update
+    @feature = Feature.find(feature_params[:id])
+    @feature.update_attributes(feature_params)
+    redirect_to @feature
 	end
 
 	def new 
@@ -26,7 +33,6 @@ class FeaturesController < ApplicationController
 
   private
     def feature_params
-      params.require(:feature).permit(:title)
+      params.require(:feature).permit(:title, :id)
     end  
-
 end
