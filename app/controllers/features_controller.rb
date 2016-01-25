@@ -4,7 +4,7 @@ class FeaturesController < ApplicationController
 	end
 
 	def show
-		@feature = Feature.first(params[:id])
+		@feature = Feature.find(params[:id])
 	end
 
 	def edit

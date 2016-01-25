@@ -1,1 +1,7 @@
-Show Feature
+= render partial: 'bricks/mastheads', collection: @feature.bricks.mastheads, as: :masthead
+.ui.container
+	.ui.huge.header 
+		= @feature.title
+	.ui.divider
+	.ui.grid.stackable
+		= render partial: 'bricks/bricks', collection: @feature.bricks.regular_bricks, as: :brick

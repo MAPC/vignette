@@ -1,14 +1,15 @@
-.header
-	Add Image
-.content
-	.ui.form
-		= form_for [feature, brick], html:{ class: "ui form" } do |b|
-			= b.hidden_field :brick_type, value: "image"
-			#editor.ui.grid
-				.field.eight.column.wide
-					= b.label :configuration, "Embed Code"
-					- if brick.configuration
-						= b.text_area :configuration, name: "brick[configuration][image_url]", "v-model"=>"input", "debounce" => "300", value: brick.configuration["image_url"]
-					- else
-						= b.text_area :configuration, name: "brick[configuration][image_url]", "v-model"=>"input", "debounce" => "300"
-			= b.submit "Go", class: "fluid ui green button center"
+.ui.container.main.text
+	.header
+		Add Image
+	.content
+		.ui.form
+			= form_for [feature, brick], html:{ class: "ui form" } do |b|
+				= b.hidden_field :brick_type, value: "image"
+				#editor.ui.grid
+					.field.eight.column.wide
+						= b.label :configuration, "Embed Code"
+						- if brick.configuration
+							= b.text_area :configuration, name: "brick[configuration][image_url]", "v-model"=>"input", "debounce" => "300", value: brick.configuration["image_url"]
+						- else
+							= b.text_area :configuration, name: "brick[configuration][image_url]", "v-model"=>"input", "debounce" => "300"
+				= b.submit "Go", class: "fluid ui green button center"

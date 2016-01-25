@@ -1,4 +1,4 @@
-%div{class: ['ui',content.widened_class,'wide','column','segment'] }
+%div{class: ['ui',content.widened_class,'wide','column'] }
   .ui.text
     = raw content.configuration["chart_html"]
-  = render partial: 'bricks/settings', locals: { content: content }  
+  = render partial: 'bricks/settings', locals: { content: content } if current_page?(:controller => 'features', :action => 'edit')
