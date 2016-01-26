@@ -1,4 +1,4 @@
-%div{class: ['ui',content.widened_class,'wide','column'] }
+%div{class: ['ui',content.widened_class,'wide','column', ('segment' if editing)] }
   .ui.text
     .p 
       = markdown(content.configuration["body"])

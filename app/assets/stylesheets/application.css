@@ -19,3 +19,11 @@ p {
 	line-height: 1.8em;
 	font-size: 16px;
 }
+
+.main.container {
+    margin-top: 7em;
+}
+
+.mastheads {
+	margin-top: 25px;
+}

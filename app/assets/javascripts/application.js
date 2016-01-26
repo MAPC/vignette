@@ -36,6 +36,13 @@ function semanticInitializers() {
 		}
 	})
 
+	$('.popup')
+	  .popup({
+    hoverable: true, 
+    position: 'top left'
+})
+	;
+
 	$('.small.modal')
 	  .modal('attach events', '.addbrick', 'show')
 	;

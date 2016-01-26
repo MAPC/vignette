@@ -1,5 +1,6 @@
-= render partial: 'bricks/mastheads', collection: @feature.bricks.mastheads, as: :masthead
-.ui.container
+.mastheads
+	= render partial: 'bricks/mastheads', collection: @feature.bricks.mastheads, as: :masthead
+.ui.container.main
 	%h1.ui.header 
 		= @feature.title
 	.ui.divider
